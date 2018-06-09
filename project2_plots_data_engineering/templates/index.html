@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>University Data</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+        <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+    <h2>School</h2>
+    <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+  <select id = "selDataset" onchange="optionChanged(this.value)">
+      <!-- <select class = "dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      </select> -->
+  </select>
+
+
+        
+
+
+    <div id = "pie"></div>
+
+    <table id = "spendRank">
+        <th>Top 100 Schools based on Tuition and amount Spent on Students</th>
+    </table>
+
+
+    <div id = "bar"></div>
+
+    <div id = "pie1"></div>
+
+    <table id = "costRank">
+        <th>Top 100 Schools based on Cost and Earnings</th>
+    </table>
+        
+
+    <div id = "scatter"></div>
+
+    <div id = "pie2"></div>
+  
+    <script>
+
+// $(document).ready(function(){
+//   $("#myInput").on("keyup", function() {
+//     var value = $(this).val().toLowerCase();
+//     $(".dropdown-menu li").filter(function() {
+//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+//     });
+//   });
+// });
+
+    
+    
+    
+    
+    </script>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+</body>
+
+</html>
