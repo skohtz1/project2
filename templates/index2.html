@@ -19,7 +19,7 @@
 		 * --------------------------------------- */
 		#section0 img,
 		#section1 img{
-			margin: 20px 0 0 0;
+			margin: 20px 0 0 52px;
 		}
 		#section2 img{
 			margin: 20px 0 0 52px;
@@ -85,52 +85,38 @@
 
 <div id="fullpage">
 	<div class="section " id="section0">
-		<h1>College Data Visualization</h1>
+		<h1>College Data Viz Project</h1>
 		 <input type="hidden" name="id" value="1" />
-        <p>Unable Larks Project 2</p>
-        <br>
-        <h2 class = "front">Start by selecting your school: </h2>
-        <select id = "selDataset" onchange="optionChanged(this.value)"></select>
-		<!-- <img src="imgs/fullPage.png" alt="fullPage" /> -->
+        <p>The Unable Larks</p>
+		<br><br><br>
+		<div class="front-page-text">
+        <h3>Start by selecting your school: </h3>
+		<select id = "selDataset" onchange="optionChanged(this.value)"></select>
+		</div>
 	</div>
 	<div class="section" id="section1">
-		<!-- <div class="slide"> -->
 			<div class="intro">
+				<br>
+				<br>
 				<h1>Academic Programs</h1>
-                <!-- <p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p> -->
                 <div class="pie" id = "pie"></div>
-				<!-- <img src="imgs/slider.png" alt="slider" /> -->
 			</div>
-
-		<!-- </div> -->
-		<div class="slide">
-			<div class="intro">
-	
-                <!-- <table id = "spendRank"></table> -->
-			</div>
-		</div>
-		<div class="slide">
-			<div class="intro">
-			</div>
-		</div>
-		<div class="slide">
-
-		</div>
 	</div>
 	<div class="section" id="section2">
         <div class="slide">
             <div class="intro">
+				<br>
+				<br>
                 <h1>Tuition & Spending</h1>
-    
                 <div id = "bar"></div>
-                <!-- <img src="imgs/example2.png" alt="example" /> -->
             </div>
         </div>
         <div class="slide">
             <div class="intro">
-                    <h1>Top 100 Schools Based on Spending Gap</h1>
-                    <p>Measures the difference between tution revenue and spending per student, ranked from lowest to highest</p>
-                    <br>
+					<br>
+					<br>
+					<h1>Reference Table</h1>
+					<p>Schools Ranked Ascending by (Spending - Tuition)</p>
                     <table id = "spendRank"></table>
             </div> 
         </div>
@@ -138,15 +124,15 @@
 	<div class="section" id="section3">
 		<div class="slide">
 			<div class="intro">
-				<h1>Demographics by Ethncity</h1>
-				<!-- <p>Designed to fit to different screen sizes as well as tablet and mobile devices.</p> -->
-				<div id = "pie1" class = "intro1"></div>
+				<br><br>
+				<h1>Demographics by Ethnicity</h1>
+				<div id = "pie1"></div>
 			</div>
 		</div>
 		<div class="slide">
 				<div class="intro">
+					<br><br>
 					<h1>Demographics by Gender</h1>
-					<!-- <p>Designed to fit to different screen sizes as well as tablet and mobile devices.</p> -->
 					<div id = "pie2"></div>
 				</div>
 			</div>
@@ -154,13 +140,19 @@
 	<div class="section" id="section4">
 		<div class="slide">
 			<div class="intro">
+				<br>
+				<br>
+
 				<h1>Cost & Earnings</h1>
 				<div id = "scatter"></div>
 			</div>
 		</div>
 		<div class="slide">
 				<div class="intro">
+					<br>
+					<br>
 					<h1>Cost & Earnings</h1>
+					<p>Schools Ranked Descending by Post-Grad Earnings per Dollar (Cost)</p>
 					<table id = "costRank"></table>
 				</div>
 		</div>

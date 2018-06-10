@@ -1,6 +1,4 @@
 
-
-
 function populate() {
     /* data route */
     var url = "/names";
@@ -74,34 +72,30 @@ function populate() {
                 columnwidth: [200,500,600],
                 columnorder: [0,1,2],
                 header: {
-                  height: 50,
-                  values: ["Rank", "School", "Spending Gap (Tuition - Spending)"],
-                  align: ["center", "center"],
+                  height: 40,
+                  values: ["Rank", "School", "Spending Gap (Spending - Tuition)"],
+                  align: "center",
                   line: {width: 1, color: 'rgb(50, 50, 50)'},
-                  fill: {color: ['rgb(235, 100, 230)']},
-                  font: {family: "Arial", size: 30, color: "white"}
+                  fill: {color: ['rgb(93, 164, 214)']},
+                  font: {family: "Arial", size: 26, color: "white"}
                 },
                 cells: {
                   height: 30,
                   values: cellValues,
                   align: ["center", "center"],
                   line: {color: "black", width: 1},
-                  fill: {color: ['rgba(228, 222, 249, 0.65)','rgb(235, 193, 238)', 'rgba(228, 222, 249, 0.65)']},
+                  fill: {color: ['rgba(228, 222, 249, 0.65)','rgb(93, 164, 214)', 'rgba(228, 222, 249, 0.65)']},
                   font: {family: "Arial", size: 20, color: ["black"]}
                 }
               }]
               
               var layout = {
-                height: 1000,
-                width: 1500,
-                // margin: {
-                //     t: 0,
-                //     b: 10,
-                //     l: 300,
-                //     r: 0
-
-                // },
-
+                height: 750,
+                width: 1400,
+                margin: {
+                    t: 20
+                
+                },
                 plot_bgcolor: "transparent",
                 paper_bgcolor: "transparent"
               }
@@ -149,26 +143,29 @@ function populate() {
                 columnwidth: [200,500,600],
                 columnorder: [0,1,2],
                 header: {
-                  height: 50,
+                  height: 40,
                   values: ["Rank", "School", "Post-Grad Earnings per Dollar (Cost)"],
-                  align: ["center", "center"],
+                  align: "center",
                   line: {width: 1, color: 'rgb(50, 50, 50)'},
-                  fill: {color: ['rgb(235, 100, 230)']},
-                  font: {family: "Arial", size: 30, color: "white"}
+                  fill: {color: ['rgb(93, 164, 214)']},
+                  font: {family: "Arial", size: 26, color: "white"}
                 },
                 cells: {
                   height: 30,
                   values: cellValues,
                   align: ["center", "center"],
                   line: {color: "black", width: 1},
-                  fill: {color: ['rgba(228, 222, 249, 0.65)','rgb(235, 193, 238)', 'rgba(228, 222, 249, 0.65)']},
+                  fill: {color: ['rgba(228, 222, 249, 0.65)','rgb(93, 164, 214)', 'rgba(228, 222, 249, 0.65)']},
                   font: {family: "Arial", size: 20, color: ["black"]}
                 }
               }]
               
               var layout = {
-                height: 1000,
-                width: 2000,
+                height: 750,
+                width: 1400,
+                margin: {
+                    t: 20
+                },
                 plot_bgcolor: "transparent",
                 paper_bgcolor: "transparent"
               }
@@ -266,14 +263,13 @@ function populate() {
             // title: 'College Cost vs Post-Grad Earnings',
             showlegend: false,
             margin: {
-                t: 50,
+                t: 75,
                 b: 400,
                 l: 80,
                 r: 100
-
             },
             height: 1100,
-            width: 1500,
+            width: 1700,
             xaxis: {
                 title: "2013 Average Cost"
             },
@@ -290,7 +286,10 @@ function populate() {
                   showarrow: true,
                   arrowhead: 3,
                   ax: -30,
-                  ay: -40
+                  ay: -40,
+                  font: {
+                    size: 16,
+                  }
                 }
               ]
         };
@@ -409,18 +408,18 @@ function optionChanged(sample1){
         var layout = {
             plot_bgcolor: 'transparent',
             paper_bgcolor: 'transparent',
+            // title: 'College Cost vs Post-Grad Earnings',
+            showlegend: false,
 
             margin: {
-                t: 50,
+                t: 75,
                 b: 400,
                 l: 80,
                 r: 100
 
             },
-            // title: 'College Cost vs Post-Grad Earnings',
-            showlegend: false,
             height: 1100,
-            width: 1500,
+            width: 1700,
             xaxis: {
                 title: "2013 Average Cost"
             },
@@ -437,7 +436,10 @@ function optionChanged(sample1){
                   showarrow: true,
                   arrowhead: 3,
                   ax: -30,
-                  ay: -40
+                  ay: -40,
+                  font: {
+                    size: 16,
+                  }
                 }
               ]
         };
@@ -511,15 +513,15 @@ function init(){
             type: "pie"
           }];      
         var layout = {
-            height: 1200,
-            width: 1200,
+            height: 1000,
             margin:{
-            l: 0,
-            r: 200,
-            b: 450,
-            t: 10,
-            pad: 0
-          },
+                l: 0,
+                r: 200,
+                b: 350,
+                t: 0,
+                pad: 0
+              },
+            width: 1000,
             // title: "Academic Programs"
             paper_bgcolor: 'transparent',
             // plot_bgcolor: 'transparent'
@@ -536,7 +538,7 @@ function init(){
             y: b[1],
             type: 'bar',
             marker:{
-                color: 'rgb(142,124,195)'
+                color: 'rgb(93, 164, 214)'
             }
         };
         
@@ -546,6 +548,7 @@ function init(){
             width: 1500,
             paper_bgcolor: 'transparent',
             plot_bgcolor: 'transparent',
+
             margin: {
                 t: 20,
                 b: 350,
@@ -558,10 +561,14 @@ function init(){
             },
             showlegend: false,
             xaxis: {
-                tickfont: {size: 20}
+                tickfont: {
+                    size: 20,
+                  }
             },
             yaxis: {
-                tickfont: {size: 16}
+                tickfont: {
+                    size: 14,
+                  }
             },
             bargap: 0.05
         };
@@ -581,11 +588,8 @@ function init(){
             type: "pie"
           }];      
         var layout = {
-            height: 1200,
-            width: 1200,
-            // title: "Demographics by Race",
-            plot_bgcolor: 'transparent',
-            paper_bgcolor: 'transparent',
+            height: 1100,
+            width: 1100,
             margin:{
                 l: 50,
                 r: 80,
@@ -593,6 +597,9 @@ function init(){
                 t: 100,
                 pad: 0
               },
+            // title: "Demographics by Race",
+            plot_bgcolor: 'transparent',
+            paper_bgcolor: 'transparent'
           };  
           Plotly.plot(PIE1, data,layout);
     });
@@ -614,6 +621,14 @@ function init(){
         var layout = {
             height: 1200,
             width: 1200,
+            margin:{
+                l: 50,
+                r: 80,
+                b: 450,
+                t: 100,
+                pad: 0
+              },
+
             // title: "Demographics by Gender"
             paper_bgcolor: 'transparent'
           };  
